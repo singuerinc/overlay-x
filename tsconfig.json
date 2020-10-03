@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["dom", "es6", "ES2017"],
+    "declaration": false,
+    "removeComments": false,
+    "stripInternal": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "jsx": "react",
+    "strict": true
+  },
+  "include": ["./src/**/*"],
+  "files": ["./src/main.tsx"]
+}
