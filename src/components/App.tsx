@@ -1,6 +1,7 @@
 import * as React from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Ruler } from "./Ruler";
+import styled from "styled-components";
 
 const theme = {
   main: "red"
@@ -25,11 +26,19 @@ const Global = createGlobalStyle`
   }
 `;
 
+const ToolsContainer = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+`;
+
 export function App() {
   return (
     <ThemeProvider theme={theme}>
       <Global />
-      <Ruler />
+      <ToolsContainer>
+        <Ruler />
+      </ToolsContainer>
     </ThemeProvider>
   );
 }

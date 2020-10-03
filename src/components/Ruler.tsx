@@ -59,16 +59,20 @@ const machine = createMachine<IContext>({
 
 const View = styled.div`
   position: fixed;
-  border: 1px solid black;
+  border: 1px dashed transparent;
   background-color: rgba(255, 0, 0, 0.5);
   touch-action: none;
   transform: translate3d(var(--left, 0), var(--top, 0), 0);
-  user-select: none;
-  * {
-    pointer-events: none;
-  }
   width: var(--width, 200px);
   height: var(--height, 200px);
+  > * {
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &:hover {
+    border-color: black;
+  }
 `;
 
 export function Ruler() {
