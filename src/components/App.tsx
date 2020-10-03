@@ -1,6 +1,7 @@
 import * as React from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Ruler } from "./Ruler";
+import { OnionImage } from "./OnionImage";
 import styled from "styled-components";
 
 const theme = {
@@ -28,8 +29,12 @@ const Global = createGlobalStyle`
 
 const ToolsContainer = styled.div`
   position: fixed;
+  pointer-events: none;
   width: 100%;
   height: 100%;
+  > * {
+    pointer-events: initial;
+  }
 `;
 
 export function App() {
@@ -38,6 +43,9 @@ export function App() {
       <Global />
       <ToolsContainer>
         <Ruler />
+      </ToolsContainer>
+      <ToolsContainer>
+        <OnionImage />
       </ToolsContainer>
     </ThemeProvider>
   );

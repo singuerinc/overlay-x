@@ -75,7 +75,7 @@ const View = styled.div`
   }
 `;
 
-export function Ruler() {
+export function Ruler({ children }) {
   const ref = useRef<HTMLDivElement>(null);
   const ruler = useRef<HTMLDivElement>(null);
   const [state, send] = useMachine(machine, {
