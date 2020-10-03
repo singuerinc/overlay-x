@@ -3,9 +3,11 @@ import styled from "styled-components";
 export const View = styled.div`
   position: fixed;
   border: 1px dashed transparent;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
   touch-action: none;
   transform: translate3d(var(--left, 0), var(--top, 0), 0);
+  min-width: 200px;
+  min-height: 200px;
   width: var(--width, 200px);
   height: var(--height, 200px);
   > * {
@@ -80,7 +82,7 @@ export function ToolContainer({
   width,
   height
 }: {
-  children: JSX.Element;
+  children: React.ReactNode;
   width: number;
   height: number;
 }) {
